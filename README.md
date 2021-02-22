@@ -1,4 +1,4 @@
-# HTIW
+# HTIW - How The Internet Works
 How the Internet Works Website - Due Mar 01; By 11:59pm.
 
 The objective of this assignment is to get you familiarized with how the Internet works. You need to work individually for this assignment. You need to create a website (like one in the History of the Internet assignment) and explain some of the following topics:

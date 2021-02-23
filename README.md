@@ -18,7 +18,7 @@ Assignment Requirements:
 2.  Create an ABOUT page, discussing about this assignment, along with few lines about yourself.
 3.  Create one page for each of the topics.
 4.  Make sure to use Bootstrap (Links to an external site.) for your website. Your website should have a navigation bar (Links to an external site.) containing the   inks to different pages.
-5.  Host this website on Github Pages or AFS.
+5.  Host this website on Github Pages or Andrew File System (AFS).
 6.  The README file of the Github repository for this assignment should clearly mention the URL of the website. 
 7.  Each topic should be introduced with the concept/definition, followed by some examples and a section explaining why we use them. 
 8.  Add at least 1 image for each topic and explain them.

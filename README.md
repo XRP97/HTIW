@@ -3,11 +3,14 @@ How the Internet Works Website - Due Mar 01; By 11:59pm.
 
 The objective of this assignment is to get you familiarized with how the Internet works. You need to work individually for this assignment. You need to create a website (like one in the History of the Internet assignment) and explain some of the following topics:
 
-1.  Domain names and ICANN
-2.  IP Addresses, Packets and Routing
-3.  DNS
-4.  HTTP and HTTPS protocols
-5.  W3C and HTML and CSS
+1.  What is ICANN?
+2.  What is W3C Links?
+3.  Tim Berners Lee
+4.  Domain names 
+5.  IP Addresses, Packets and Routing
+6.  DNS
+7.  HTTP and HTTPS protocols
+8.  W3C and HTML and CSS
 
 Assignment Requirements:
 

@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
+    <link href="css/main.css" rel="stylesheet">
     <title>HOW</title>
 </head>
 <body>
@@ -32,12 +32,14 @@
                             <a class="nav-link" href="about.html">About</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button"
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink"
+                               role="button"
                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Wires, Cables & Wifi
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="icann,w3c,tim.html"> ICANN, W3C & Tim Berners Lee</a></li>
+                                <li><a class="dropdown-item" href="icann,w3c,tim.html"> ICANN, W3C & Tim Berners Lee</a>
+                                </li>
                                 <li><a class="dropdown-item active" href="wcwifi.html">Wires, Cables & Wifi</a></li>
                                 <li><a class="dropdown-item" href="ip&dns.html">IP & DNS </a></li>
                                 <li><a class="dropdown-item" href="prr.html">Packets, Routing & Reliability</a></li>
@@ -55,29 +57,52 @@
 
 <div class="container mt-3 mb-5">
     <div class="jumbotron">
-        <h1 class="display-10"> Wires, Cables & Wifi
+        <h1 class="display-10 fs-4"> Wires, Cables & Wifi
         </h1>
         <p class="">
-            Add Context?
+            Here's a question: How does a picture, text message, or email get sent from one device to another?
+        </p>
+        It isn't magic, it's the Internet. A tangible, physical system made to move information. The Internet is a lot like the postal service, but the physical stuff that gets sent is a little bit different. Instead of boxes and envelopes, the Internet ships binary information. Information is made of bits.
+        <p>
+        A bit can be described as any pair of opposites: on or off, yes or no. We typically use a 1 meaning on, or a 0 meaning off. Because a bit has two possible states we call it binary code. 8 bits strung together makes 1 byte. 1000 bytes all together is a kilobyte. 1000 kilobytes is a megabyte. A song is typically encoded using about 3-4MB. It doesn't matter if it's a picture, a video, or a song, everything on the Internet is represented and sent around as bits. These are the atoms of information. But it's not like we're physically sending 1s and 0s from one place to another or one person to another.
+        </p>
+        <p>
+        So what is the physical stuff that actually gets sent over the wires and the airways? Well, let's look at a small example here of how humans can physically communicate to send a single bit of information from one place to another. Let's say that we can turn on a light for a 1 or off for 0. Or use beeps or similar sorts of things to Morse code. These methods work but they're really slow, error prone, and totally dependent upon humans. What we really need is a machine. Throughout history, we've built many systems that can actually send this binary information through different types of physical mediums.
+        </p>
+        <p>
+        Today, we physically send bits by electricity, light, and radio waves. To send a bit via electricity, imagine that you have two lightbulbs connected by a copper wire. If one device operator turns on the electricity then the lightbulb lights up. No electricity, then no light. If the operators on both ends agree that light on means 1 and light off means 0, then we have a system for sending bits of information from one person to another using electricity. But we have kinda a small problem, if you need to send a 0 five times in a row, well how can you do that in such a way that either person can actually count the number of 0s
+        </p>
+        <p>
+        Well the solution is to introduce a clock or a timer. The operators can agree that the sender will send 1 bit per second and the receiver will sit down and record every single second and see what's on the line. To send five 0s in a row, you just turn off the light, wait 5 seconds, the person at the other end of the line will write down all 5 seconds. For five 1s in a row, switch it on, wait 5 seconds, write down every second. Obviously we'd like to send things a little bit faster than one bit per second, so we need to increase our bandwidth - the maximum transmission capacity of a device.
+        </p>
+        <p>
+        Bandwidth is measured by bitrate, which is the number of bits that we can actually send over a given period of time usually measured in seconds. A different measure of speed is the latency, or the amount of time it takes for one bit to travel from one place to another, from the source to the requesting device. In our human analogy, one bit per second was pretty fast but kinda hard for a human to keep up with. Let's say that you actually want to download a 3MB song in 3 seconds, at 8 million bits per megabyte that means a bit rate of about 8 million bits per second. Obviously, humans can't send or receive 8 million bits per second but a machine could do that just fine. But now there's also the question of what sort of cable to send these messages over and how far the signals can go. With an ethernet wire, the kind that you find in your home, office, or school you see measurable signal loss or interference over just a few hundred feet.
+        </p>
+        <p>
+        For the Internet to work all around the world, we need to have an alternative method to send bits really long distances. We're talking like across oceans. So what else can we use? What do we know that moves a lot faster than just electricity through a wire? Light. We can actually send bits as light beams from one place to another using a fiber optic cable. A fiber optic cable is a thread of glass engineered to reflect light. When you send a beam of light down the cable, light bounces up and down the length of the cable until it is received on the other end. Depending on the bounce angle, we can actually send multiple bits simultaneously, all of them traveling at the speed of light. So fiber is really really fast. But more importantly the signal doesn't really degrade over long distances. This is how you can go hundreds of miles without signal loss. This is why we use fiber optic cables across the ocean floors to connect one continent to another. In 2008 there was a cable that was actually cut near Alexandria, Egypt which really interrupted the Internet for most of the Middle East and India.
+        </p>
+        <p>
+        So we take this Internet thing for granted but it's really a pretty fragile, physical system. And fiber is awesome but it's also really expensive and hard to work with. For most purposes, you're going to find copper cable. But how do we move things without wires? How do we send things wirelessly? Radio. Wireless bit sending machines typically use a radio signal to send bits from one place to another. The machines have to actually translate the 1s and 0s into radio waves of different frequencies. The receiving machines reverse the process and convert it back into binary on your computer. So wireless has made our Internet mobile. But a radio signal doesn't travel all that far before it gets completely garbled. This way you can't really pick up a Los Angeles radio station in Chicago. As great as wireless is, today it still relies on the wired Internet. If you're in a coffee shop using wifi, then the bits get sent to this wireless router and then are transferred through the physical wire to travel the really long distances of the Internet. The physical method for sending bits may change in the future, whether its lasers sent between satellites, or radio waves from balloons, or drones, but the underlying binary representation of information and the protocols for sending that information and receiving that information have pretty much stayed the same. Everything on the Internet, whether it's words, emails, images, cat videos, puppy videos, all come down to these 1s and 0s being delivered by electronic pulses, light beams, radio waves, and lots and lots of love.
         </p>
 
-        <hr class="my-4">
-        <p>
-            Add Context?
-        </p>
+        <hr class="my-lg-4">
         <p class="lead">
             <a class="btn btn-primary btn-md"
-               href="https://www.youtube.com/watch/VANORrzKX50"
-               role="button">Click this video link to learn more
+               href="https://www.youtube.com/watch?v=ZhEf7e4kopM"
+               role="button">Youtube link: Wires, Cables & Wifi
             </a>
         </p>
     </div>
-
-    <div class="card" style="width: 18rem; height: 30rem">
-        <img class="card-img-top" src="images/HOI-Browser.jpg" alt="Random Internet Code Picture?">
+    <div class="card" style="width: 18rem; height: 19rem">
+        <img class="card-img-top" src="images/wcwifi.jpg" alt="">
         <div class="card-body">
-            <p class="card-text"> Microsoft Office Logo
+            <p class="card-text fw-bold"> Fiber optic cables
             </p>
+            <div class="mx-auto" style="width: 1000px">
+            Reference:
+            </div>
+            <a href="https://kent-animals.neocities.org/wires_cables_wifi.html">
+            Wires, Cables & Wifi</a>
         </div>
     </div>
 </div>

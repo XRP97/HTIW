@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link href="css/main.css" rel="stylesheet">
-    <title>HOW</title>
+    <title>Packets, Routing & Reliability</title>
 </head>
 <body>
 
@@ -38,15 +38,16 @@
                                 Packets, Routing & Reliability
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="cc.html">Cybersecurity & Crime</a></li>
+                                <li><a class="dropdown-item" href="epk.html">Encryption & Public Keys</a></li>
+                                <li><a class="dropdown-item" href="hh.html">HTTP & HTML</a></li>
                                 <li><a class="dropdown-item" href="icann,w3c,tim.html"> ICANN, W3C & Tim Berners Lee</a>
                                 </li>
-                                <li><a class="dropdown-item" href="wcwifi.html">Wires, Cables & Wifi</a></li>
                                 <li><a class="dropdown-item" href="ip&dns.html">IP & DNS </a></li>
                                 <li><a class="dropdown-item active" href="prr.html">Packets, Routing & Reliability</a>
                                 </li>
-                                <li><a class="dropdown-item" href="hh.html">HTTP & HTML</a></li>
-                                <li><a class="dropdown-item" href="epk.html">Encryption & Public Keys</a></li>
-                                <li><a class="dropdown-item" href="cc.html">Cybersecurity & Crime</a></li>
+                                <li><a class="dropdown-item" href="wcwifi.html">Wires, Cables & Wifi</a></li>
+
                             </ul>
                         </li>
                     </ul>
@@ -57,48 +58,136 @@
 </header>
 
 
-<div class="container mt-3 mb-5">
-    <div class="jumbotron">
-        <h1 class="display-10 fs-4"> Routers and Reliability
-        </h1>
-        <p class="">
-        How is it possible for every piece of data to be delivered to you reliably?
-        </p>
-        Say you want to play a Video from Youtube. It seems like your computer connects directly to Youtube webservers and sends you a video on a direct, dedicated line. Actually, that's not how the internet works. If the internet were made of direct, dedicated connections it would be impossible to keep things working as millions of users join. Especially since there is no guarantee that every wire and computer is working all the time. Instead, data travels on the internet in a much less direct fashion.
-        </p>
-        <p>
-        The way information gets transferred from one computer to another is pretty interesting. It need not follow a fixed path, in fact, your path may change in the midst of a computer to computer conversation. Information on the internet goes from one computer to another in what we call a packet of information and a packet travels from one place to another on the internet a lot like how you might get from one place to another in a car. Depending on traffic congestion or road conditions, you might choose or be forced to take a different route to get to the same place each time you travel. And just as you can transport all sorts of stuff inside a car, many kinds of digital information can be sent with IP packets but there are some limits. What if for example you need to move a space shuttle from where it was built to where it will be launched. The shuttle won't fit in one truck so it needs to be broken down into pieces, transported using a fleet of trucks. They could all take different routes and might get to the destination at different times. But once all the pieces are there, you can reassemble the pieces into the complete shuttle and it will be ready for launch. On the internet the details work similarly. If you have a very large image that you want to send to a friend or upload to a website, that image might be made up of 10s of millions of bits of 1s and 0s, too many to send along in one packet.
-        </p>
-        <p>
-        Since it's data on a computer, the computer sending the image can quickly break it into hundreds or even thousands of smaller parts called packets. Unlike cars or trucks these packets don't have drivers and they don't choose their route. Each packet has the internet address of where it came from and where it's going. Special computers on the internet called routers/modems act like traffic managers to keep the packets moving through the networks smoothly. If one route is congested, individual packets may travel different routes through the internet and they may arrive at the destination at slightly different times or even out of order. Let's talk about how this works. As part of the internet protocol, every router keeps track of multiple paths for sending packets, and it chooses the cheapest available path for each piece of data based on destination IP address for the packet. Cheapest in this case doesn't mean cost, but time and non-technical factors such as politics and relationships between companies.        </p>
-        <p>
-        Often the best route for data to travel isn't necessarily the most direct. Having options for paths makes the network fault tolerant. Which means the network can keep sending packets even if something goes horribly, horribly wrong. This is the basis for a key principle of the internet: reliability. Now, what if you want to request some data and not everything is delivered? Say you want to watch a video. How can you be 100% sure all the data will be delivered so the video plays perfectly? Introducing your new best friend, TCP (transmission control protocol). TCP manages the sending and receiving of all your data as packets. Think of it like a guaranteed mail service. When you request a video on your device, Youtube sends a video broken up into many packets. When your packets arrive, TCP does a full inventory and sends back acknowledgements of each packet received. If all packets are there, TCP signs for your delivery and you're done.If TCP finds some packets are missing, it won't sign, otherwise your video won't sound as good or portions of the video could be missing. For each missing or incomplete packet, Youtube will resend them. Once TCP verifies the delivery of many packets for that one video request, your video will start to play. What's great about the TCP and router systems is they're scalable. They can work with 8 or 8 billion devices.
-        </p>
-        <p>
-        In fact, because of these principles of fault tolerance and redundancy, the more routers and modems we add the more reliable the internet becomes. What's also great is we can grow and scale the internet without interrupting service for anybody using it. The internet is made of hundreds of thousands of networks and billions of computers and devices connected physically. These different systems that make up the internet connect to each other, communicate with each other, and work together because of agreed upon standards for how data is sent around on the internet. Computing devices, or routers along the internet, help all the packets make their way to the destination where they're reassembled, if necessary, in order. This happens billions of times a day, whether you and others are sending an email, visiting a web page, doing a video chat, using a mobile app, or when sensors or devices on the internet talk to each other.
-        </p>
+<main class="container mt-2">
+    <div class="container mt-3 mb-5">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-9">
+                    <h1 class="display-10 fs-4"> Packets, Routing & Reliability
+                    </h1>
+                    <p class="">
+                        How is it possible for every piece of data to be delivered to you reliably?
+                    </p>
+                    <p>
+                        Say you want to play a Video from Youtube. It seems like your computer connects directly to
+                        Youtube webservers and sends you a video on a direct, dedicated line. Actually, that's not how
+                        the internet works. If the internet were made of direct, dedicated connections it would be
+                        impossible to keep things working as millions of users join. Especially since there is no
+                        guarantee that every wire and computer is working all the time. Instead, data travels on the
+                        internet in a much less direct fashion.
+                    </p>
+                    <p>
+                        The way information gets transferred from one computer to another is pretty interesting. It need
+                        not follow a fixed path, in fact, your path may change in the midst of a computer to computer
+                        conversation. Information on the internet goes from one computer to another in what we call a
+                        packet of information and a packet travels from one place to another on the internet a lot like
+                        how you might get from one place to another in a car. Depending on traffic congestion or road
+                        conditions, you might choose or be forced to take a different route to get to the same place
+                        each time you travel. And just as you can transport all sorts of stuff inside a car, many kinds
+                        of digital information can be sent with IP packets but there are some limits. What if for
+                        example you need to move a space shuttle from where it was built to where it will be launched.
+                        The shuttle won't fit in one truck so it needs to be broken down into pieces, transported using
+                        a fleet of trucks. They could all take different routes and might get to the destination at
+                        different times. But once all the pieces are there, you can reassemble the pieces into the
+                        complete shuttle and it will be ready for launch. On the internet the details work similarly. If
+                        you have a very large image that you want to send to a friend or upload to a website, that image
+                        might be made up of 10s of millions of bits of 1s and 0s, too many to send along in one packet.
+                    </p>
+                    <p>
+                        Since it's data on a computer, the computer sending the image can quickly break it into hundreds
+                        or even thousands of smaller parts called packets. Unlike cars or trucks these packets don't
+                        have drivers and they don't choose their route. Each packet has the internet address of where it
+                        came from and where it's going. Special computers on the internet called routers/modems act like
+                        traffic managers to keep the packets moving through the networks smoothly. If one route is
+                        congested, individual packets may travel different routes through the internet and they may
+                        arrive at the destination at slightly different times or even out of order. Let's talk about how
+                        this works. As part of the internet protocol, every router keeps track of multiple paths for
+                        sending packets, and it chooses the cheapest available path for each piece of data based on
+                        destination IP address for the packet. Cheapest in this case doesn't mean cost, but time and
+                        non-technical factors such as politics and relationships between companies. </p>
+                    <p>
+                        Often the best route for data to travel isn't necessarily the most direct. Having options for
+                        paths makes the network fault tolerant. Which means the network can keep sending packets even if
+                        something goes horribly, horribly wrong. This is the basis for a key principle of the internet:
+                        reliability. Now, what if you want to request some data and not everything is delivered? Say you
+                        want to watch a video. How can you be 100% sure all the data will be delivered so the video
+                        plays perfectly? Introducing your new best friend, TCP (transmission control protocol). TCP
+                        manages the sending and receiving of all your data as packets. Think of it like a guaranteed
+                        mail service. When you request a video on your device, Youtube sends a video broken up into many
+                        packets. When your packets arrive, TCP does a full inventory and sends back acknowledgements of
+                        each packet received. If all packets are there, TCP signs for your delivery and you're done.If
+                        TCP finds some packets are missing, it won't sign, otherwise your video won't sound as good or
+                        portions of the video could be missing. For each missing or incomplete packet, Youtube will
+                        resend them. Once TCP verifies the delivery of many packets for that one video request, your
+                        video will start to play. What's great about the TCP and router systems is they're scalable.
+                        They can work with 8 or 8 billion devices.
+                    </p>
+                    <p>
+                        In fact, because of these principles of fault tolerance and redundancy, the more routers and
+                        modems we add the more reliable the internet becomes. What's also great is we can grow and scale
+                        the internet without interrupting service for anybody using it. The internet is made of hundreds
+                        of thousands of networks and billions of computers and devices connected physically. These
+                        different systems that make up the internet connect to each other, communicate with each other,
+                        and work together because of agreed upon standards for how data is sent around on the internet.
+                        Computing devices, or routers along the internet, help all the packets make their way to the
+                        destination where they're reassembled, if necessary, in order. This happens billions of times a
+                        day, whether you and others are sending an email, visiting a web page, doing a video chat, using
+                        a mobile app, or when sensors or devices on the internet talk to each other.
+                    </p>
+                </div>
 
-        <hr class="my-lg-4">
-        <p class="lead">
-            <a class="btn btn-primary btn-md"
-               href="https://www.youtube.com/watch?v=AYdF7b3nMto"
-               role="button">Youtube link: Packets, Routing & Reliability
-            </a>
-        </p>
-    </div>
-    <div class="card" style="width: 18rem; height: 19rem">
-        <img class="figure-img" src="images/prr.jpg" alt="">
-        <div class="card-body">
-            <p class="card-text fw-bold"> Routers and Reliability
-            </p>
-            <div class="mx-auto" style="width: 1000px">
-            Reference:
+                <div class="col-3">
+                    <div class="mx-auto fw-bold mt-3" style="...">
+                        Links:
+                    </div>
+                    <nav class="nav flex-column">
+                        <a href="https://xrp97.github.io/HTIW/index.html">Home: ADD THE LINK</a>
+                        <a href="https://xrp97.github.io/HTIW/wcwifi.html">About: ADD THE LINK</a>
+                        <a href="https://xrp97.github.io/HTIW/cc.html">Cybersecurity & Crime</a>
+                        <a href="https://xrp97.github.io/HTIW/epk.html">Encryption & Public Keys</a>
+                        <a href="https://xrp97.github.io/HTIW/hh.html">HTTP & HTML</a>
+                        <a href="https://xrp97.github.io/HTIW/icann,w3c,tim.html">ICANN, W3C & Tim Lee</a>
+                        <a href="https://xrp97.github.io/HTIW/ip&dns.html">IP & DNS</a>
+                        <a href="https://xrp97.github.io/HTIW/wcwifi.html">Wires, Cables & Wifi</a>
+                    </nav>
+                    <hr class="my-lg-4">
+                    <p class="lead">
+                        <a class="btn btn-danger btn-md"
+                           href="https://www.youtube.com/watch?v=AYdF7b3nMto"
+                           role="button">Youtube link: Packets, Routing & Reliability
+                        </a>
+                    </p>
+                    <div class="card" style="width: 18rem; height: 14rem">
+                        <img class="figure-img" src="images/prr.jpg" alt="">
+                        <div class="card-body">
+                            <p class="card-text fw-bold"> Packets, Routers and Reliability
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a href="https://kent-animals.neocities.org/packets_routers_reliability.html">
-            Routers and Reliability</a>
         </div>
     </div>
-</div>
+</main>
+
+
+<main>
+    <hr class="my-lg-3">
+    <div class="fw-bold mt-3" style="width: 1000px">
+        References:
+    </div>
+    <div class="col-6">
+        <nav class="nav flex-column">
+            <a href="https://kent-animals.neocities.org/packets_routers_reliability.html">
+                Packets, Routers and Reliability
+            </a>
+        </nav>
+    </div>
+</main>
+<main>
+    <div class="jumbotron mb-5">
+    </div>
+</main>
 
 
 <!-- Optional JavaScript; choose one of the two! -->
